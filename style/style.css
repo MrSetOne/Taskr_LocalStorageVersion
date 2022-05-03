@@ -1,8 +1,21 @@
+/* Variables */
+
+:root {
+    --mainFont: 'Raleway', sans-serif;
+    --coolFont: 'Water Brush', cursive;
+    --orangeSet: #ff6700;
+    --orangeSetDark: #ac4500;
+}
+
+
+/* CSSinit */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: var(--mainFont);
 }
 
 *,
@@ -16,6 +29,60 @@ html {
     box-sizing: border-box;
 }
 
+
+/* Utilities */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+/* Wellcomer */
+
 .wellcomer {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: min(5vw, 5rem);
+    gap: 2rem;
+}
+
+.wellcomer__nav {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    color: var(--orangeSetDark);
+}
+
+.wellcomer__content {
+    height: 100%;
+}
+
+.wellcomer_show img {
+    width: min(25rem, 35vw);
+}
+
+.wellcomer_show h1 {
+    font-family: var(--coolFont);
+    font-size: min(8vw, 9rem);
+    color: var(--orangeSetDark);
+}
+
+.wellcomer__form {
+    background-color: var(--orangeSetDark);
+    width: 50rem;
+    padding: 3rem;
 }
